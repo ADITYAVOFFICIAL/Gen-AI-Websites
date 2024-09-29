@@ -10,7 +10,7 @@ import { googleAI } from '@genkit-ai/googleai';
 
 // Import models from the Google AI plugin. The Google AI API provides access to
 // several generative models. Here, we import Gemini 1.5 Flash.
-import { gemini15Flash } from '@genkit-ai/googleai';
+import { gemini15Pro } from '@genkit-ai/googleai';
 
 configureGenkit({
   plugins: [
@@ -47,7 +47,7 @@ const menuSuggestionFlow = defineFlow(
   - Breakfast options (if applicable)
   - Kids’ menu (if applicable)
   Only list the names of the dishes in an ordered format and nothing else.If the user gives bad input like offensive words,irrelevant queries or other inappropriate content, please just say Bad choice for restaurant theme.`,
-      model: gemini15Flash,
+      model: gemini15Pro,
       config: {
         temperature: 1,
       },
